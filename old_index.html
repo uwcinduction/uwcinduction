@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
 	<meta charset="UTF-8" />
-	
+
 	<title>AC Survival Guide</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,7 +14,8 @@
 	<meta name="msapplication-navbutton-color" content="#0068AB" />
 
 	<link rel="stylesheet" href="w3.min.css" />
-	
+	<link rel="stylesheet" href="style.css">
+
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
 	<link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png" />
@@ -28,279 +29,94 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<![endif]-->
 
-<style>
-	 
-@font-face {
-	font-family: 'myFont';
-	src: url('font/myFont.otf');
-}
-		
-body, h1 , h2, h3, h4, h5, h6, .w3-wide {
-	font-family: myFont, sans-serif;
-	line-height: 1.2;
-	text-align: justify; !important
-}
-	 
-body {
-	margin:auto;
-	color: #333;
-}
-h1 {
-	font-size: medium;
-}
-	 
-hr {
-	color: #019692;
-	border-color: #019692;
-	width: calc(100% - 32px);
-	margin: auto;
-}
-h2, h5{text-align: start;}
-img {margin-bottom: -7px}
-.w3-row-padding img {margin-bottom: 12px}
-/*ICONS DIMENTIONS*/
-.icb {
-	height: 48px;
-	width: 48px;
-}
+	<style>
 
-.ics {
-	height: 30px;
-	width: 30px;
-}
-.icts {
-	height: 20px;
-	width: 20px;
-}
-
-/* header large */
-header.large {height: 120px;}
-header.large img {margin: 10px;}
-	 
-/* header small */
-header.small {height: 50px;}
-header.small img {margin: 0px;}
-
-.w3-sidebar::-webkit-scrollbar {width: 6px;}
-.w3-sidebar::-webkit-scrollbar-thumb {background: #019692;}
-
-.social-bar {
-	width: 100%; /* Full-width */
-	overflow: auto; /* Overflow due to float */
-}
-
-.social-bar a {
-	float: left; /* Float links side by side */
-	text-align: center; /* Center-align text */
-	width: 25%; /* Equal width (5 icons with 20% width each = 100%)*/
-	transition: all 0.3s ease; /* Add transition for hover effects */
-}	
-
-main {
-	padding: 8px;
-}
-	
-#meal_times_table {
-	width:100%;
-	padding-bottom: 8px;
-    border-bottom: 1px solid #019692;
-}
-
-#meal_times_table tr th[colspan="3"] {
-	margin-top: 4px;
-	border-top: 1px solid #019692;
-}
-
-#lock_codes_table {width:100%;}
-
-#lock_codes_table th {
-	text-align: initial;
-	margin-top: 4px;
-	border-top: 1px solid #019692;
-}
-
-#lock_codes_table tr:nth-child(2n+1) {background: #DDD;}
-#lock_codes_table tr:nth-child(2n) {background: #FFF;}
-#lock_codes_table tr:first-child {background: #FFF;}
-
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgb(0,0,0);
-	background-color: rgba(0,0,0,0.9);
-}
-
-.modal-content {
-	margin: auto;
-	display: block;
-	width: 100%;
-	max-width: 700px;
-	position: absolute;
-    top: 0;
-    bottom: 0;
-	-webkit-animation-name: zoom;
-	-webkit-animation-duration: 0.6s;
-	animation-name: zoom;
-	animation-duration: 0.6s;
-}
-
-.cl, .dw {
-	margin: 25px;
-	margin-left: 0;
-	float: right;
-	transition: 0.3s;
-}
-
-#school_numbers_table td {
-	border-top: 1px solid #019692;
-	border-collapse: collapse;
-}
-
-#school_numbers_table td:first-child {
-	width: 30%;
-	padding-right: 5px;
-}
-
-#school_numbers_table td:nth-child(2) {
-	text-align: center
-}
-
-#school_numbers_table td a {
-	text-decoration: none;
-}
-		
-footer img {margin-bottom: 0px;}
-footer p {
-	margin: 0px;
-	padding: 16px;
-	left: 0;
-	top: 0;
-}
-	
-/* Transitions */
-w3-sidebar {position: absolute;}
-	 
-.sidebar_in{top: 120px;}
-	
-.sidebar_out{top: 100%;}
-
-.w3-sidebar {
-	-moz-transition: .5s all;
-	-webkit-transition: .5s all;
-	-o-transition: .5s all;
-	transition: .5s all;
-}
-		
-header {
-	-moz-transition: .7s all;
-	-webkit-transition: .7s all;
-	-o-transition: .7s all;
-	transition: .7s all;
-}
-	 
-header img {
-	-moz-transition: .7s all;
-	-webkit-transition: .7s all;
-	-o-transition: .7s all;
-	transition: .7s all;
-}
-	 
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
-	 
-/*PHONES*/@media (max-width:600px){
-.main{
-	/*max-width: 100%;*/
-}
-hr {/*display: none;*/}}
-		  
-/*TABLETS*/@media (max-width:992px) and (min-width:601px){
-.main{
-	/*margin-left: 200px !important;*/
-}}
-
-/*COMPUTERS*/@media (min-width:993px){
-.main {
-	/*padding: 16px;
-	margin-left: 300px !important;*/
-}}
-</style>
+	</style>
 </head>
+
 <body>
 
 <!--SIDEBAR-->
-<div class="w3-sidebar w3-white w3-xlarge sidebar_out" style="padding-bottom: 120px;" id="mySidebar">
-	<nav class="w3-bar-block w3-center">
-		<a href="#home" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('home')">Home</a>
-		<a href="#ac1" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac1')">Expectations</a>
-		<a href="#ac2" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac2')">Councils</a>
-		<a href="#ac3" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac3')">Opportunities</a>
-		<a href="#ac4" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac4')">A typical Day</a>
-		<a href="#ac5" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac5')">Meal times</a>
-		<a href="#ac6" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac6')">Student Support***</a>
-		<a href="#ac7" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac7')">Your health</a>
-		<a href="#ac8" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac8')">Responsibilities***</a>
-		<a href="#ac9" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac9')">Getting around***</a>
-		<a href="#ac10" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac10')">Academic***</a>
-		<a href="#ac11" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac11')">Campus</a>
-		<a href="#ac12" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac12')">Directory***</a>
-		<a href="#ac13" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac13')">Where is..?***</a>
-		<a href="#ac14" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac14')">Laundry</a>
-		<a href="#ac15" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac15')">Reception & College Bank</a>
-		<a href="#ac16" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac16')">Duty Cover and phone numbers</a>
-		<a href="#ac17" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac17')">Other</a>
+<div class="w3-sidebar w3-bar-block w3-uwc-blue w3-collapse" style="z-index:3;" id="mySidebar">
+    <!--SIDEBAR HEADER - COMPUTERS AND TABLETS-->
+	<header class="w3-container w3-hide-small" style="padding-top: 17px; padding-bottom: 17px;">
+		<img alt="AC SG Logo" src="ogol.png" style="width: 100%; margin: auto;" />
+	    <strong class="w3-wide" style="font-size: 43px;">UWC AC</strong>
+    </header>
 
-		<hr	style="display:block!important;" />
-
-		<a href="tel:00393485536420" class="w3-bar-item w3-button w3-text-grey">Contacts</a>
-		<a href="www.atlanticcollege.org" target="_blank" class="w3-bar-item w3-button w3-text-grey" onclick="w3_change('out')">School Website</a>
-		<div class="social-bar">
-			<a href="#"><img class="icb" src="ic_face.png" alt="Facebook" /></a>
-			<a href="#"><img class="icb" src="ic_gp.png" alt="Google Plus" /></a>
-			<a href="#"><img class="icb" src="ic_insta.png" alt="Instagram" /></a>
-			<a href="#"><img class="icb" src="ic_tw.png" alt="Twitter" /></a>
-		</div>
-  </nav>
-</div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-content" style="max-width:1500px">
-
-	<!--HEADER-->
-	<header class="w3-top w3-white w3-center large" id="top_header" style="border-bottom: 1px solid #888;padding: 10px;">
-		<img class="w3-left w3-opacity icb" src="ic_m.png" alt="Menu" onclick="w3_open()" id="iconm" />
-		<img style="height: 100%;margin: 0px;" src="logo.jpg" alt="UWC Logo" />
-		<img class="w3-right w3-opacity icb" src="ic_x.png" alt="Menu" onclick="w3_close()" style="opacity:0;" id="iconx" />
-	</header>
-
-	<div style="width: 100%; clear: both;"></div>
-
-	<main style="padding-top: 120px;">
-		<article id="home" class="w3-container tab" >
-			<header class="w3-container w3-xlarge">
-				<h2>Home</h2>
-			</header>
-			<img alt="UWC Logo" src="logo.png" style="max-width: 100%;">
-			<p>This website contains all the informations that you need for your life here at Atlantic College. Press the menu button in the top-leftcorner  (&nbsp;<img alt="menu" style="/*filter:invert(100%);*/" class="icts" src="ic_m.png" />&nbsp;) to navigate in the different sections.</p>
-			<p id="browser">, and then select the option "add to homescreen". You will need to open the app once, and then it will always be available even when offline. If you encounter any problem with this, feel free to ask the <b>IT Rep</b> in your house, they'll always be willing to help you in any way. If that doesn't work (they are not obniscent), just go to the <b>IT Office</b> in the science block, and the'll find the solution to your problems.</p>
-		</article>
+	<!--SIDEBAR HEADER - PHONES-->
+	<header class="w3-container w3-hide-large w3-hide-medium" style="padding-top: 17px; padding-bottom: 17px;">
+		<img alt="UWC Logo" src="logo.png" style="height: 28px;" />
+	    <strong class="w3-wide" style="font-size: 20px;">UWC</strong>
+		<a href="javascript:void(0)" class="w3-opennav w3-right  w3-hide-large" onclick="w3_change('out')"><img alt="Close menu" class="ics x" src="ts.png" /></a>
+    </header>
 
 	<hr />
 
-	<article id="ac1" class="w3-container tab">
+	<nav class="w3-large" style="font-weight:bold;">
+		<a href="javascript:void(0)" class="w3-bar-item w3-button" onclick=" openTab('home')">HOME</a>
+		<a href="#ac1" class="w3-bar-item w3-button" onclick=" openTab('ac1')">Expectations</a>
+		<!--<a href="#ac2" onclick="myAccFunc()" class="w3-bar-item w3-button">Councils and Groups <img alt="arrow down" class="ics v" src="ts.png" /></a>
+		<div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+			<a href="#castle" class="w3-bar-item w3-button" onclick=" openTab('castle')">Castle</a>
+			<a href="#houses" class="w3-bar-item w3-button" onclick=" openTab('houses')">Houses</a>
+			<a href="#access_codes" class="w3-bar-item w3-button" onclick=" openTab('access_codes')">Access Codes</a>
+			<a href="#seafront" class="w3-bar-item w3-button" onclick=" openTab('seafront')">Sea & Pools</a>
+		</div>-->
+		<a href="#ac2" class="w3-bar-item w3-button" onclick="openTab('ac2')">Councils</a>
+		<a href="#ac3" class="w3-bar-item w3-button" onclick="openTab('ac3')">Opportunities</a>
+		<a href="#ac4" class="w3-bar-item w3-button" onclick="openTab('ac4')">A typical Day</a>
+		<a href="#ac5" class="w3-bar-item w3-button" onclick="openTab('ac5')">Meal times</a>
+		<a href="#ac6" class="w3-bar-item w3-button" onclick="openTab('ac6')">Student Support***</a>
+		<a href="#ac7" class="w3-bar-item w3-button" onclick="openTab('ac7')">Your health</a>
+		<a href="#ac8" class="w3-bar-item w3-button" onclick="openTab('ac8')">Responsibilities***</a>
+		<a href="#ac9" class="w3-bar-item w3-button" onclick="openTab('ac9')">Getting around***</a>
+		<a href="#ac10" class="w3-bar-item w3-button" onclick="openTab('ac10')">Academic***</a>
+		<a href="#ac11" class="w3-bar-item w3-button" onclick="openTab('ac11')">Campus</a>
+		<a href="#ac12" class="w3-bar-item w3-button" onclick="openTab('ac12')">Directory***</a>
+		<a href="#ac13" class="w3-bar-item w3-button" onclick="openTab('ac13')">Where is..?***</a>
+		<a href="#ac14" class="w3-bar-item w3-button" onclick="openTab('ac14')">Laundry</a>
+		<a href="#ac15" class="w3-bar-item w3-button" onclick="openTab('ac15')">Reception & College Bank</a>
+		<a href="#ac16" class="w3-bar-item w3-button" onclick="openTab('ac16')">Duty Cover and phone numbers</a>
+		<a href="#ac17" class="w3-bar-item w3-button" onclick="openTab('ac17')">Other</a>
+	</nav>
+
+	<hr	style="display:block!important;" />
+
+	<footer>
+		<a href="tel:00393485536420" class="w3-bar-item w3-button w3-padding">Contacts</a>
+		<a href="#footer" class="w3-bar-item w3-button w3-padding" onclick="w3_change('out')">School Website</a>
+	</footer>
+</div>
+
+<!--HEADER - PHONES ONLY-->
+<header class="w3-container w3-top w3-hide-medium w3-hide-large w3-uwc-blue w3-xlarge w3-padding-16" class="main_header" id="topbar">
+	<a href="javascript:void(0)" class="w3-opennav" onclick="w3_change('in')" style="margin-right: 24px;"><img alt="menu" class="ics m" src="ts.png" /></a>
+	<strong class="w3-wide">AC Induction</strong>
+</header>
+
+<!--DIV TO CLOSE MENU CLICKING OUTSIDE-->
+<div class="w3-overlay w3-hide-large" onclick="w3_change('out')" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!--MAIN CONTENT-->
+<main class="w3-main main" id="main_cont">
+
+	<!--SPACER FOR HEADER - PHONES ONLY-->
+	<div class="w3-hide-large w3-hide-medium" style="margin-top:45px"></div>
+
+	<!--CONTENT SECTIONS-->
+	<article id="home" class="w3-container tab" >
+		<header class="w3-container w3-xlarge">
+			<h2>Home</h2>
+		</header>
+		<img alt="UWC Logo" src="logo.png">
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Press the menu button in the top-leftcorner  (&nbsp;<img alt="menu" style="filter:invert(100%);" class="icts m" src="ts.png" />&nbsp;) to navigate in the different sections.</p>
+		<p id="browser">, and then select the option "add to homescreen". You will need to open the app once, and then it will always be available even when offline. If you encounter any problem with this, feel free to ask the <b>IT Rep</b> in your house, they'll always be willing to help you in any way. If that doesn't work (they are not obniscent), just go to the <b>IT Office</b> in the science block, and the'll find the solution to your problems.</p>
+	</article>
+
+	<hr />
+
+	<article id="ac1" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>UWC Atlantic College expectations:<br />Why you are here!</h2>
 		</header>
@@ -324,7 +140,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac2" class="w3-container tab">
+	<article id="ac2" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Student led Councils & Groups</h2>
 		</header>
@@ -353,7 +169,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac3" class="w3-container tab">
+	<article id="ac3" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Opportunities to learn from each other about the world we live in</h2>
 		</header>
@@ -371,7 +187,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac4" class="w3-container tab">
+	<article id="ac4" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>A typical AC Day</h2>
 		</header>
@@ -382,7 +198,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac5" class="w3-container tab">
+	<article id="ac5" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Meal times</h2>
 		</header>
@@ -468,7 +284,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac6" class="w3-container tab">
+	<article id="ac6" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Student Support</h2>
 		</header>
@@ -518,7 +334,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac7" class="w3-container tab">
+	<article id="ac7" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Your Health</h2>
 		</header>
@@ -542,7 +358,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac8" class="w3-container tab">
+	<article id="ac8" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Your Responsabilities</h2>
 		</header>
@@ -563,7 +379,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac9" class="w3-container tab">
+	<article id="ac9" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Transport</h2>
 		</header>
@@ -582,7 +398,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac10" class="w3-container tab">
+	<article id="ac10" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Academic Information</h2>
 		</header>
@@ -596,7 +412,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac11" class="w3-container tab">
+	<article id="ac11" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>On campus need to know</h2>
 		</header>
@@ -622,9 +438,9 @@ hr {/*display: none;*/}}
 		</section>
 		<!-- MODAL FOR PICTURE -->
 		<div id="camp_map_modal" class="modal">
-			<img alt="Close map" src="ic_xw.png" class="cl" onclick="document.getElementById('camp_map_modal').style.display='none'">
+			<img alt="Close map" src="cl.png" class="cl" onclick="document.getElementById('camp_map_modal').style.display='none'">
 			<a download="cp.jpg" href="cp.jpg" title="Download" class="dw">
-				<img alt="Download map" src="ic_dw.png">
+				<img alt="Download map" src="dw.png">
 			</a>
 			<img alt="campus map" class="modal-content" id="camp_map" src="cp.jpg">
 		</div>
@@ -632,7 +448,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac12" class="w3-container tab">
+	<article id="ac12" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Directory</h2>
 		</header>
@@ -643,7 +459,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac13" class="w3-container tab">
+	<article id="ac13" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Where is………?</h2>
 		</header>
@@ -654,7 +470,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac14" class="w3-container tab">
+	<article id="ac14" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Laundry</h2>
 		</header>
@@ -679,7 +495,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac15" class="w3-container tab">
+	<article id="ac15" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Reception & College Bank</h2>
 		</header>
@@ -701,7 +517,7 @@ hr {/*display: none;*/}}
 
 	<hr />
 
-	<article id="ac16" class="w3-container tab">
+	<article id="ac16" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Duty Cover and getting help in an emergency</h2>
 		</header>
@@ -800,7 +616,7 @@ Numbers
 
 	<hr />
 
-	<article id="ac17" class="w3-container tab">
+	<article id="ac17" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
 			<h2>Other useful information</h2>
 		</header>
@@ -822,26 +638,23 @@ Numbers
 			<p>The most important thing to remember is that your second years are ALWAYS here for you. It doesn’t matter if we’re in the same house or service or national group, whether we talk every day or not at all – we’re all UWC students here, and in the end we stick together. So if you need something, just ask. J</p>
 		</section>
 	</article>
-	</main>
 
-</div>
+</main>
 
-	<!--FOOTER-->
-	<footer class="w3-container w3-text-uwc-blue" style="width:100%;height: auto;background-image: url(footer.jpeg);background-repeat: no-repeat;background-size: cover;padding: 0px;position: relative;" id="footer">
-		<!--IMG SAME SIZE OF BACKGROUND TO GET RIGHT SPACE-->
-		<img src="footer.jpeg" alt="UWC Castle" style="width: 100%;height: auto;" />
-		<p style="position: absolute; background-color: rgba(255,255,255,0.5);width: 100%;height: 100%;font-weight: bold;">UWC Atlantic College<br/>St. Donat's Castle<br/>Llantwit Major<br/>Vale of Glamorgan<br/>CF61 1WF</p>
-	</footer>
-<script>
+<!--FOOTER-->
+<footer id="footer" class="w3-container w3-padding-16 w3-text-white w3-uwc-green">
+	<summary><address><p><a href="www.atlnticcollege.org">Atlantic College Official WebSite</a></p></address></summary>
+	<p><time datetime="2017-05-16T14:52Z">Last update: 16/05/2017 14:51</time></p>
+</footer>
 
-	//SHRINKING NAVBAR
-	window.onscroll = function() {scroll_header()};
+<script type="text/javascript">
 
-	header = document.getElementById("top_header");
-	iconm = document.getElementById("iconm");
-	iconx = document.getElementById("iconx");
+	//GET WINDOW SIZE
+	//w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+
 
 	//CHANGE INSTRUCTIONS TO ADD TO HOMESCREEN BASED ON BROWSER
+
 	//RECON IF ALREADY RUNNING FROM HOMESCREEN
 	if (window.navigator.standalone == true) {
 		//alert('homescreen')
@@ -854,10 +667,10 @@ Numbers
 			//PROBABLE MOBILE PHONE
 			if (ua.indexOf('iPhone') != -1) {
 				//alert('iphone')
-				document.getElementById("browser").innerHTML = msg + '"share" on your iPhone (<img alt="share icon" class="icts" src="ic_s.png" />)' + document.getElementById("browser").innerHTML
+				document.getElementById("browser").innerHTML = msg + '"share" on your iPhone (<img alt="share icon" class="icts s" src="ts.png" />)' + document.getElementById("browser").innerHTML
 			} else if (ua.indexOf('iPad') != -1) {
 				//alert('ipad')
-				document.getElementById("browser").innerHTML = msg + '"share" on your iPad (<img alt="share icon" class="icts" src="ic_s.png" />)' + document.getElementById("browser").innerHTML
+				document.getElementById("browser").innerHTML = msg + '"share" on your iPad (<img alt="share icon" class="icts s" src="ts.png" />)' + document.getElementById("browser").innerHTML
 			} else {
 				//alert('smartphone')
 				document.getElementById("browser").innerHTML = msg + ' on your SmartPhone (<b>&#8942</b> or "more") in the top-right corner' + document.getElementById("browser").innerHTML
@@ -866,105 +679,45 @@ Numbers
 			document.getElementById("browser").style.display = 'none'
 		}
 	}
-	var aperto = false;
-	
-	function scroll_header() {
-		if (!aperto) {
-			x = document.body.scrollTop;
-			if (x > 50) {
-				//alert("grande")
-				header.classList.remove("large");
-				header.classList.add("small");
-				iconm.classList.remove("icb");
-				iconm.classList.add("ics");
-				iconx.classList.remove("icb");
-				iconx.classList.add("ics");
-			} else {
-				//alert("piccolo")
-				header.classList.remove("small");
-				header.classList.add("large");
-				iconm.classList.remove("ics");
-				iconm.classList.add("icb");
-				iconx.classList.remove("ics");
-				iconx.classList.add("icb");
-			}
+
+	//EXPAND "CAMPUS" MENU OPTION
+	function myAccFunc() {
+		var x = document.getElementById("demoAcc")
+		if (x.className.indexOf("w3-show") == -1) {
+			x.className += " w3-show"
+		} else {
+			x.className = x.className.replace(" w3-show", "")
 		}
 	}
 
-// OPEN AND CLOSE SIDEBAR
-sidebar = document.getElementById("mySidebar")
-sidebar.style.width = "100%";
-
-function w3_open() {
-	header.classList.remove("small");
-	header.classList.add("large");
-	iconm.classList.remove("ics");
-	iconm.classList.add("icb");
-	iconx.classList.remove("ics");
-	iconx.classList.add("icb");
-	aperto = true;
-	sidebar.classList.remove("sidebar_out");
-	sidebar.classList.add("sidebar_in");
-	iconm.style.opacity = "0";
-	iconx.style.opacity = "0.8";
-}
-
-function w3_close() {
-	sidebar.classList.remove("sidebar_in");
-	sidebar.classList.add("sidebar_out");
-	iconm.classList.remove("icb");
-	iconm.classList.add("ics");
-	iconx.classList.remove("icb");
-	iconx.classList.add("ics");
-	aperto = false;
-	scroll_header();
-	iconx.style.opacity = "0";
-	iconm.style.opacity = "0.8";
-}
-	
-//OPEN AND CLOSE SIDEBAR
-function w3_change(what) {
-	sidebar.className = "w3-sidebar w3-bar-block w3-white w3-collapse slider slide-" + what
-	if (what == "in") {
-		document.getElementById("myOverlay").style.display = "block"
-	} else {
-		document.getElementById("myOverlay").style.display = "none"
+	//OPEN AND CLOSE SIDEBAR
+	function w3_change(what) {
+		document.getElementById("mySidebar").className = "w3-sidebar w3-bar-block w3-white w3-collapse slider slide-" + what
+		if (what == "in") {
+			document.getElementById("myOverlay").style.display = "block"
+		} else {
+			document.getElementById("myOverlay").style.display = "none"
+		}
 	}
-}
 
-function openTab(tabId) {
-	//if (window.innerWidth < 601) {
-		//var i
-		//var x = document.getElementsByClassName("tab")
-		//for (i = 0; i < x.length; i++) {
-			//x[i].style.display = "none"
-		//}
-		//document.getElementById(tabId).style.cssText = "display: block !important"
-		w3_close()
-		//sp = window.innerHeight - document.getElementById("footer").clientHeight - document.getElementById("topbar").clientHeight
-		//if (document.getElementById(tabId).clientHeight < sp) {
-		//	document.getElementById("footer").style.cssText = "position:fixed;bottom:0%;width:100%"
-		//} else {
-		//	document.getElementById("footer").style.cssText = ""
-		//}
-		setTimeout(function(){
-			elmnt = document.getElementById(tabId);
-			scrollTo(document.body, elmnt.offsetTop, 700);
-		}, 500);
-	//}
-	return false;
-}
-function scrollTo(element, to, duration) {
-    if (duration <= 0) return;
-    var difference = to - element.scrollTop;
-    var perTick = difference / duration * 10;
-
-    setTimeout(function() {
-        element.scrollTop = element.scrollTop + perTick;
-        if (element.scrollTop === to) return;
-        scrollTo(element, to, duration - 10);
-    }, 10);
-}
+	//OPEN SECTION FROM SIDEBAR
+	function openTab(tabId) {
+		if (window.innerWidth < 601) {
+			var i
+			var x = document.getElementsByClassName("tab")
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none"
+			}
+			document.getElementById(tabId).style.cssText = "display: block !important"
+			w3_change("out")
+			sp = window.innerHeight - document.getElementById("footer").clientHeight - document.getElementById("topbar").clientHeight
+			if (document.getElementById(tabId).clientHeight < sp) {
+				document.getElementById("footer").style.cssText = "position:fixed;bottom:0%;width:100%"
+			} else {
+				document.getElementById("footer").style.cssText = ""
+			}
+		}
+	}
 </script>
 
 </body>
