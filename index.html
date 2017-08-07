@@ -87,17 +87,20 @@ header.small img {margin: 0px;}
 .social-bar {
 	width: 100%; /* Full-width */
 	overflow: auto; /* Overflow due to float */
+	height: 48px;
 }
 
 .social-bar a {
-	float: left; /* Float links side by side */
-	text-align: center; /* Center-align text */
-	width: 25%; /* Equal width (5 icons with 20% width each = 100%)*/
-	transition: all 0.3s ease; /* Add transition for hover effects */
+	float: left;
+	text-align: center;
+	width: 25%;
+	transition: all 0.3s ease;
 }	
 
 main {
 	padding: 8px;
+	max-width: 800px;
+	margin: auto;
 }
 	
 #meal_times_table {
@@ -138,6 +141,7 @@ main {
 
 .modal-content {
 	margin: auto;
+	margin-top: 100px;
 	display: block;
 	width: 100%;
 	max-width: 700px;
@@ -174,7 +178,8 @@ main {
 #school_numbers_table td a {
 	text-decoration: none;
 }
-		
+
+footer {max-width: 800px; margin: auto;}
 footer img {margin-bottom: 0px;}
 footer p {
 	margin: 0px;
@@ -242,7 +247,7 @@ hr {/*display: none;*/}}
 <body>
 
 <!--SIDEBAR-->
-<div class="w3-sidebar w3-white w3-xlarge sidebar_out" style="padding-bottom: 120px;" id="mySidebar">
+<div class="w3-sidebar w3-white w3-xlarge sidebar_out" style="padding-bottom: 128px;" id="mySidebar">
 	<nav class="w3-bar-block w3-center">
 		<a href="#home" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('home')">Home</a>
 		<a href="#ac1" class="w3-bar-item w3-button w3-text-grey" onclick="return openTab('ac1')">Expectations</a>
@@ -268,10 +273,10 @@ hr {/*display: none;*/}}
 		<a href="tel:00393485536420" class="w3-bar-item w3-button w3-text-grey">Contacts</a>
 		<a href="www.atlanticcollege.org" target="_blank" class="w3-bar-item w3-button w3-text-grey" onclick="w3_change('out')">School Website</a>
 		<div class="social-bar">
-			<a href="#"><img class="icb" src="ic_face.png" alt="Facebook" /></a>
-			<a href="#"><img class="icb" src="ic_gp.png" alt="Google Plus" /></a>
-			<a href="#"><img class="icb" src="ic_insta.png" alt="Instagram" /></a>
-			<a href="#"><img class="icb" src="ic_tw.png" alt="Twitter" /></a>
+			<a href="https://www.facebook.com/UWCAC" onclick="prova('fb://page/UWCAC')"><img class="icb" src="ic_face.png" alt="Facebook" /></a>
+			<a href="https://www.atlanticcollege.org/"><img class="icb" src="ic_gc.png" alt="Google Plus" /></a>
+			<a href="https://www.instagram.com/uwcatlantic/" onclick="prova('fb://profile/fbID')"><img class="icb" src="ic_insta.png" alt="Instagram" /></a>
+			<a href="https://twitter.com/uwcatlantic" onclick="prova('twitter://uwcatlantic')"><img class="icb" src="ic_tw.png" alt="Twitter" /></a>
 		</div>
   </nav>
 </div>
@@ -293,7 +298,7 @@ hr {/*display: none;*/}}
 			<header class="w3-container w3-xlarge">
 				<h2>Home</h2>
 			</header>
-			<img alt="UWC Logo" src="logo.png" style="max-width: 100%;">
+			<img alt="UWC Logo" src="nnnlogo.png" style="max-width: 100%;">
 			<p>This website contains all the informations that you need for your life here at Atlantic College. Press the menu button in the top-leftcorner  (&nbsp;<img alt="menu" style="/*filter:invert(100%);*/" class="icts" src="ic_m.png" />&nbsp;) to navigate in the different sections.</p>
 			<p id="browser">, and then select the option "add to homescreen". You will need to open the app once, and then it will always be available even when offline. If you encounter any problem with this, feel free to ask the <b>IT Rep</b> in your house, they'll always be willing to help you in any way. If that doesn't work (they are not obniscent), just go to the <b>IT Office</b> in the science block, and the'll find the solution to your problems.</p>
 		</article>
