@@ -145,9 +145,6 @@ main {
 	display: block;
 	width: 100%;
 	max-width: 700px;
-	position: absolute;
-    top: 0;
-    bottom: 0;
 	-webkit-animation-name: zoom;
 	-webkit-animation-duration: 0.6s;
 	animation-name: zoom;
@@ -275,7 +272,7 @@ hr {/*display: none;*/}}
 		<div class="social-bar">
 			<a href="https://www.facebook.com/UWCAC" onclick="prova('fb://page/UWCAC')"><img class="icb" src="ic_face.png" alt="Facebook" /></a>
 			<a href="https://www.atlanticcollege.org/"><img class="icb" src="ic_gc.png" alt="Google Plus" /></a>
-			<a href="https://www.instagram.com/uwcatlantic/" onclick="prova('fb://profile/fbID')"><img class="icb" src="ic_insta.png" alt="Instagram" /></a>
+			<a href="https://www.instagram.com/uwcatlantic/" onclick="prova('instagram://user?username=uwcatlantic')"><img class="icb" src="ic_insta.png" alt="Instagram" /></a>
 			<a href="https://twitter.com/uwcatlantic" onclick="prova('twitter://uwcatlantic')"><img class="icb" src="ic_tw.png" alt="Twitter" /></a>
 		</div>
   </nav>
@@ -298,7 +295,7 @@ hr {/*display: none;*/}}
 			<header class="w3-container w3-xlarge">
 				<h2>Home</h2>
 			</header>
-			<img alt="UWC Logo" src="nnnlogo.png" style="max-width: 100%;">
+			<img alt="UWC Logo" src="nnnlogo.png" style="max-width: 100%;margin: auto;">
 			<p>This website contains all the informations that you need for your life here at Atlantic College. Press the menu button in the top-leftcorner  (&nbsp;<img alt="menu" style="/*filter:invert(100%);*/" class="icts" src="ic_m.png" />&nbsp;) to navigate in the different sections.</p>
 			<p id="browser">, and then select the option "add to homescreen". You will need to open the app once, and then it will always be available even when offline. If you encounter any problem with this, feel free to ask the <b>IT Rep</b> in your house, they'll always be willing to help you in any way. If that doesn't work (they are not obniscent), just go to the <b>IT Office</b> in the science block, and the'll find the solution to your problems.</p>
 		</article>
@@ -969,6 +966,11 @@ function scrollTo(element, to, duration) {
         if (element.scrollTop === to) return;
         scrollTo(element, to, duration - 10);
     }, 10);
+}
+
+function prova(url) {
+	setTimeout(function () { window.location = return true; }, 25);
+	window.location = url;
 }
 </script>
 
